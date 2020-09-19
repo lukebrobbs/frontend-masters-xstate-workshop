@@ -1,5 +1,4 @@
-@import '../../styles/index.scss';
-
+@import "../../styles/index.scss";
 
 #app {
   --color-bg: white;
@@ -21,20 +20,24 @@
     white-space: nowrap;
   }
   &:not([data-state]),
-  &[data-state~='hidden'] {
+  &[data-state~="hidden"] {
     #display {
       opacity: 0;
       transform: translateY(50%);
     }
   }
 
-  &[data-state~='visible'] {
+  &[data-state~="visible"] {
     #display {
       transform: none;
     }
   }
 
-  &[data-state~='visible.dark'] {
+  &[data-state~="visible.dark"] {
+    --color-bg: rgb(104, 100, 100);
+    --color-fg: white;
+  }
+  &[data-state~="visible.dark.darkest"] {
     --color-bg: black;
     --color-fg: white;
   }
